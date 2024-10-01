@@ -11,6 +11,10 @@ const cartSlice = createSlice({
         add(state, action) {
             console.log(action.payload)
 
+            const updatedCartList = state.cartlist.concat(action.payload)
+            const update_total = state.total + action.payload.price; 
+            return { ...state, cartlist: updatedCartList , total :update_total}
+
         },
         remove() {
 
