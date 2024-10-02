@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { add, remove } from "../store/cartSlice"
+import { add } from "../store/cartSlice"
 import "./ProductCard.css";
 
 export const ProductCard = ({ product }) => {

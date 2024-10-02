@@ -9,15 +9,18 @@ const cartSlice = createSlice({
     },
     reducers: {
         add(state, action) {
-            console.log(action.payload)
+            // console.log(action.payload)
 
             const updatedCartList = state.cartlist.concat(action.payload)
             const update_total = state.total + action.payload.price; 
             return { ...state, cartlist: updatedCartList , total :update_total}
 
         },
-        remove() {
-
+        remove(state, action) {
+            
+            const updatedCartList = state.cartlist.filter(item => item.id !== action.payload.id )
+            const update_total = state.total - action.payload.price; 
+            return { ...state, cartlist: updatedCartList , total :update_total}
         }
     }
 })
