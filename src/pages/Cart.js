@@ -13,13 +13,13 @@ export const Cart = () => {
 
 
 
-  return (
+  return ( 
     <main>
       <section className="cart">
         {/* <h1>Cart Items: {cartData.length}</h1> */}
         {
           cartData.cartlist.length > 0 ?
-            <h1>Cart Items:{cartData.total} </h1>
+            <h1>Cart Items: {cartData.cartlist.length} / ${cartData.total} </h1>
             :
             <h1 style={{ color: "red" }}>No Item Has Been Selected </h1>
 

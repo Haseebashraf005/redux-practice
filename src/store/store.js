@@ -6,3 +6,12 @@ export const store = configureStore({
         cartState: cartReducer,
     }
 });
+
+
+
+// steps for redux tool kit : 
+
+// create store
+// wrap app component under Provider and pass props store
+// create slice
+// register  reducer in store
