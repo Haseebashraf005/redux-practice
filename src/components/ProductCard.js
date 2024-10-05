@@ -14,7 +14,7 @@ export const ProductCard = ({ product }) => {
 
     if (productInCart) {
       setIncart(true)
-      console.log(productInCart)
+      console.log(productInCart);
     } else {
       setIncart(false)
     }
